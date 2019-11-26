@@ -1,0 +1,30 @@
+" 显示行号
+set nu
+" 使用相对行号
+set rnu
+" 突出显示当前行
+set cursorline
+" 启用鼠标
+set mouse=a
+set selection=exclusive
+set selectmode=mouse,key
+" 显示括号匹配
+set showmatch
+" 设置TAB长度为4空格
+set tabstop=4
+" 设置自动缩进长度为4空格
+set shiftwidth=4
+" 继承前一行缩进方式
+set autoindent
+" 设置粘贴模式
+set paste
+" 显示TAB和SPACE
+set listchars=tab:>-,trail:~
+set list
+" 总是显示状态栏
+set laststatus=2
+" 显示光标当前位置
+set ruler
+
+" 让vimrc配置自动生效
+autocmd BufWritePost $MYVIMRC source $MYVIMRC

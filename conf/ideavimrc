@@ -1,0 +1,129 @@
+" M->cmd, A->option, C->control
+" <ESC> - escape, <BS> - backspace, <CR> - return
+
+" leader
+let mapleader = " "
+let g:mapleader=" "
+
+" 启用vim surround功能
+set surround
+" 启用multi cursor
+set multiple-cursors
+" 显示行号
+set nu
+" 显示相对行号
+set rnu
+" 高亮搜索
+"set hlsearch
+" 自动定位到输入中的字符串，不需要回车搜索
+set incsearch
+" 显示当前的模式
+set showmode
+" 共享系统粘贴板
+" set clipboard=unnamed
+" 搜索时智能匹配大小写
+set ignorecase smartcase
+
+"编辑模式下esc映射为jj
+inoremap jj <esc>
+
+" 补全行尾;
+map <Leader>es <esc>$a;<esc>
+
+" 以下为调用IDEA自身功能
+
+" 切换tab
+nnoremap <Leader>tn gt
+nnoremap <Leader>tp gT
+" 关闭当前tab
+nnoremap <Leader>tc  :action CloseEditor<CR>
+" 关闭所有tab
+nnoremap <Leader>tac :action CloseAllEditors<CR>
+
+" 搜索符号
+nnoremap <Leader>gs :action GotoSymbol<CR>
+" 查找方法
+nnoremap <Leader>ga :action GotoAction<CR>
+" 查找类
+nnoremap <Leader>gc :action GotoClass<CR>
+" 跳到用到的方法或类
+nnoremap <Leader>gd :action GotoDeclaration<CR>
+" 跳到接口实现
+nnoremap <Leader>gi :action GotoImplementation<CR>
+" 跳到测试文件
+nnoremap <Leader>gt :action GotoTest<CR>
+" 弹出显示文件路径
+nnoremap <Leader>fp :action ShowFilePath<CR>
+" 查找引用了当前方法的文件
+nnoremap <Leader>fu :action FindUsages<CR>
+" 显示右键菜单
+nnoremap <Leader>pm :action ShowPopupMenu<CR>
+" 运行文件
+nnoremap <Leader>rc :action ChooseRunConfiguration<CR>
+" 重命名变量
+nnoremap <Leader>re :action RenameElement<CR>
+
+" 搜索任何地方，相当于双击Shift
+nnoremap <Leader>se :action SearchEverywhere<CR>
+" 搜索引用了当前变量的地方
+nnoremap <Leader>su :action ShowUsages<CR>
+
+" 在当前文件中替换
+nnoremap <Leader>fip :action FindInPath<CR>
+
+" 在当前文件中替换
+nnoremap <Leader>rf :action Replace<CR>
+
+" 在当前文件中查找
+nnoremap <Leader>ff :action Find<CR>
+
+" 在路径中替换
+nnoremap <Leader>rip :action ReplaceInPath<CR>
+
+" 退到上一次编辑的地方
+nnoremap <Leader>b :action Back<CR>
+
+" 弹出当前文件所有函数
+nnoremap <Leader>fs :action FileStructurePopup<CR>
+
+" 弹出切换tab
+nnoremap <Leader><Leader>s :action Switcher<CR>
+
+" 文件编辑历史
+nnoremap <Leader>sh :action LocalHistory.ShowHistory<CR>
+
+" 全屏
+nnoremap <Leader>fc :action ToggleFullScreen<CR>
+
+" 调用project
+nnoremap <Leader>ap :action ActivateProjectToolWindow<CR>
+
+" 调用Terminal
+nnoremap <Leader>at :action ActivateTerminalToolWindow<CR>
+
+" 以上为调用IDEA自身功能
+
+" 在插入模式中使用Ctrl+v粘贴全局剪贴板内容
+inoremap <C-v> <esc>"+p
+
+" 在Visual模式中使用Ctrl+c复制内容到全局剪贴板
+vnoremap <C-c> "+y
+
+" 在Visual模式中使用Ctrl+x剪切内容到全局剪贴板
+vnoremap <C-x> "+x
+
+" 复制剪切粘贴省略"
+nnoremap _ "_
+nnoremap + "+
+vnoremap _ "_
+vnoremap + "+
+
+
+" Press `a` to activate AceJump
+nnoremap <Leader><Leader>a :action AceAction<CR>
+
+" Press `t` to activate Target Mode
+nnoremap <Leader><Leader>t :action AceTargetAction<CR>
+
+" Press `l` to activate Line Mode
+nnoremap <Leader><Leader>l :action AceLineAction<CR>

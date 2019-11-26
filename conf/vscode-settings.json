@@ -1,0 +1,40 @@
+{
+    "editor.fontSize": 16,
+    "editor.fontFamily": "'Fira Code', 'Source Han Sans CN'",
+    "editor.fontLigatures": true,
+    "editor.cursorStyle": "line",
+    "editor.tabCompletion": "onlySnippets",
+    "files.eol": "\n",
+    "editor.renderWhitespace": "boundary",
+    "search.quickOpen.includeSymbols": true,
+    "editor.formatOnPaste": true,
+    "editor.lineNumbers": "relative",
+    "diffEditor.ignoreTrimWhitespace": true,
+    "vim.insertModeKeyBindingsNonRecursive": [
+        {
+            "before": ["j", "j"],
+            "after": ["<Esc>"]
+        }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["_"],
+            "after": ["\"", "_"]
+        },
+        {
+            "before": ["+"],
+            "after": ["\"", "+"]
+        }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": ["_"],
+            "after": ["\"", "_"]
+        },
+        {
+            "before": ["+"],
+            "after": ["\"", "+"]
+        }
+    ],
+    "todo-tree.highlights.enabled": true
+}

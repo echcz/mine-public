@@ -1,40 +1,76 @@
 {
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell",
+            "args": [
+                "-NoExit",
+                "-Command",
+                "chcp 65001"
+            ]
+        },
+        "Command Prompt": {
+            "path": [
+                "${env:windir}\\Sysnative\\cmd.exe",
+                "${env:windir}\\System32\\cmd.exe"
+            ],
+            "args": [],
+            "icon": "terminal-cmd"
+        },
+        "Git Bash": {
+            "source": "Git Bash"
+        }
+    },
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "terminal.integrated.fontFamily": "'Fira Code', 'Microsoft YaHei'",
+    "editor.fontFamily": "'Fira Code', 'Microsoft YaHei'",
     "editor.fontSize": 16,
-    "editor.fontFamily": "'Fira Code', 'Source Han Sans CN'",
-    "editor.fontLigatures": true,
-    "editor.cursorStyle": "line",
-    "editor.tabCompletion": "onlySnippets",
-    "files.eol": "\n",
-    "editor.renderWhitespace": "boundary",
-    "search.quickOpen.includeSymbols": true,
-    "editor.formatOnPaste": true,
-    "editor.lineNumbers": "relative",
-    "diffEditor.ignoreTrimWhitespace": true,
+    "editor.lineNumbers":"relative",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "todo-tree.highlights.enabled": true,
+    "vim.easymotion": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "vim.changeWordIncludesWhitespace": true,
+    "vim.visualstar": true,
+    "vim.highlightedyank.enable": true,
+    "vim.leader": "<space>",
     "vim.insertModeKeyBindingsNonRecursive": [
         {
-            "before": ["j", "j"],
-            "after": ["<Esc>"]
+            "before": [
+                "j", "j"
+            ],
+            "after": [
+                "<Esc>"
+            ]
         }
     ],
     "vim.normalModeKeyBindingsNonRecursive": [
         {
-            "before": ["_"],
-            "after": ["\"", "_"]
+            "before": [":"],
+            "commands": [
+                "workbench.action.showCommands",
+            ]
         },
         {
-            "before": ["+"],
-            "after": ["\"", "+"]
-        }
-    ],
-    "vim.visualModeKeyBindingsNonRecursive": [
-        {
-            "before": ["_"],
-            "after": ["\"", "_"]
+            "before": [
+                "<leader>", "a"
+            ],
+            "after": [
+                "g", "g", "v", "G", "$"
+            ]
         },
         {
-            "before": ["+"],
-            "after": ["\"", "+"]
-        }
-    ],
-    "todo-tree.highlights.enabled": true
-}
+            "before": [
+                "<leader>", "y"
+            ],
+            "after": [
+                "\"", "+", "y", "y"
+            ]
+        },
+    ]
+{
+       
